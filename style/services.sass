@@ -1,0 +1,82 @@
+@import "variables"
+
+.services
+  display: flex
+  flex-direction: column
+  align-items: center
+  width: 80%
+  margin: 182px auto 0 auto
+
+.big__title
+  font-size: 45px
+  line-height: 67px
+  font-weight: 500
+  z-index: 5
+  color: $__darkgrey-text
+
+.subtitle
+  height: 111px
+  margin-top: 23px
+  font-weight: 800
+  font-size: 18px
+  line-height: 29px
+  text-align: center
+  z-index: 5
+  color: $__darkgrey-text
+
+.service__blocks
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+
+.service__block
+  display: flex
+  flex-direction: column
+  justify-content: flex-start
+  width: 30%
+  margin-top: 51px
+  @media (max-width: 700px)
+    width: 45%
+  @media (max-width: 450px)
+    width: 100%
+
+.service__block-icon
+  display: block
+  width: 72px
+  height: 72px
+  box-sizing: border-box
+  border-radius: 50%
+  background-position: center
+  background-repeat: no-repeat
+
+.service__block-title
+  margin-top: 18px
+  font-weight: 500
+  font-size: 18px
+  line-height: 27px
+
+.service__block-text
+  width: 100%
+  margin-top: 27px
+  color: $__service-grey-text
+  font-weight: normal
+  font-size: 16.2px
+  line-height: 26px
+
+@each $i, $icon in $__icons
+  .block-#{$i}
+    .service__block-icon
+      background-image: url("../images/#{$icon}.svg")
+
+@each $i, $col in $__icon-colors
+  .block-#{$i}
+    .service__block-icon
+      border: 1px solid $col
+    .service__block-title
+      color: $col
+
+@each $i, $bg in $__icon-backgrounds
+  .block-#{$i}
+    .service__block-icon
+      background-color: $bg

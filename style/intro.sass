@@ -1,0 +1,78 @@
+@import "variables"
+
+.pink
+  color: $__pink-text
+
+.bluepink
+  color: $__bluepink-text
+
+.lightgreen
+  color: $__lightgreen-text
+
+.intro
+  display: flex
+  flex-direction: column
+  align-items: center
+  position: relative
+  width: 100%
+  margin: 108px auto 0 auto
+
+.what__we-do
+  height: 38px
+  margin-bottom: 15px
+  font-weight: 800
+  font-size: 12.6px
+  line-height: 26px
+  color: $__pink-text
+  text-transform: uppercase
+  z-index: 5
+
+.we__reached
+  margin-bottom: 89px
+  text-align: center
+  font-weight: 500
+  font-size: 27px
+  line-height: 38px
+  color: $__darkgrey-text
+  z-index: 5
+
+.nobel__prizes
+  display: flex
+  justify-content: space-between
+  flex-wrap: wrap
+  width: 100%
+  z-index: 5
+
+.np__info
+  display: block
+  width: 30%
+  @media (max-width: 400px)
+    width: 100%
+  @media (max-width: 550px)
+    width: 100%
+
+.np__value
+  margin: 0
+  font-weight: 900
+  font-size: 99px
+  line-height: 118px
+  text-align: center
+
+.np__text
+  font-weight: 800
+  font-size: 12.6px
+  line-height: 24px
+  text-align: center
+  color: $__darkgrey-text
+  text-transform: uppercase
+
+.map
+  position: absolute
+  width: 1281px
+  height: 618px
+  top: 110px
+  @media (max-width: 1000px)
+    display: none
+  &:hover
+    > svg
+      stroke: lightblue
